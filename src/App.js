@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ".//App.css";
+import Tariff from "./components/Tariff.jsx";
 
-function App() {
+
+function TariffList() {
+  const tariffs = [
+    {
+      name: "Безлимитный 300",
+      price: 300,
+      speed: 10,
+      description: "Объем включенного трафика не ограничен",
+    },
+    {
+      name: "Безлимитный 450",
+      price: 450,
+      speed: 100,
+      description: "Объем включенного трафика не ограничен",
+    },
+    {
+      name: "Безлимитный 550",
+      price: 550,
+      speed: 200,
+      description: "Объем включенного трафика не ограничен",
+    },
+    {
+      name: "Безлимитный 1000",
+      price: 1000,
+      speed: 200,
+      description: "Объем включенного трафика не ограничен",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="tariff-list">
+      {tariffs.map((tariff, index) => (
+        <Tariff
+          key={index}
+          name={tariff.name}
+          price={tariff.price}
+          speed={tariff.speed}
+          description={tariff.description}
+          index={index}
+          isBig={index ===2}
+        />
+      ))}
     </div>
   );
 }
 
-export default App;
+
+export default TariffList;

@@ -1,0 +1,72 @@
+.tariff-name {
+    height: 15%;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.tariff-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    height: 40%;
+}
+
+.price-value {
+    font-size: 40px;
+}
+
+.tariff-speed {
+    padding-top: 12px;
+    text-align: center;
+    height: 15%;
+    background-color: #D3D3D3;
+}
+
+.tariff-description {
+    padding-top: 12px;
+    text-align: center;
+    height: 25%;
+    background-color: #C0C0C0;
+}
+
+.tariff-name.dark-blue {
+    background-color: #48D1CC;
+}
+
+.tariff-price.blue {
+    background-color: #40E0D0;
+}
+
+.tariff-name.dark-green {
+    background-color: #217457;
+}
+
+.tariff-price.green {
+    background-color: #218457;
+}
+
+.tariff-name.dark-red {
+    background-color: #BF3030;
+}
+
+.tariff-price.red {
+    background-color: #BF2010;
+}
+
+.tariff-name.black {
+    background-color: #353535;
+}
+
+.tariff-price.gray {
+    background-color: #3F3F3F;
+}
+
+.big-tariff {
+    margin-top: -1%;
+    height: 55vh;
+}
