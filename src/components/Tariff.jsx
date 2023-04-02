@@ -1,7 +1,7 @@
 import React from "react";
 import "./Tariff.css";
 
-function Tariff({ name, price, speed, description, index, isBig }) {
+function Tariff({ name, price, speed, description, index, isBig, isSelected, onClick}) {
     let nameClass = "tariff-name";
     let priceClass = "tariff-price";
     let tariffClass = "tariff";
@@ -32,19 +32,23 @@ function Tariff({ name, price, speed, description, index, isBig }) {
         tariffClass += " big-tariff";
     }
 
-  return (
-    <div className={tariffClass}> {isBig}
+    if (isSelected) {
+      tariffClass += "selected";
+      nameClass += "selected";
+      priceClass += "selected";
+    }
+    return (
+      <div className={tariffClass} onClick={onClick}>
       <div className={nameClass}>{name}</div>
-        <div className={priceClass}>
-            <p>руб</p>
-            <div className="price-value"> {price}</div>
-           <p>/мес</p>
-            </div>
-        <div className="tariff-speed">до {speed} Мбит/сек </div>
-      
+      <div className={priceClass}>
+      <p>руб</p>
+      <div className="price-value">{price}</div>
+      <p>/мес</p>
+      </div>
+      <div className="tariff-speed">до {speed} Мбит/сек </div>
       <div className="tariff-description">{description}</div>
-    </div>
-  );
-}
+      </div>
+      );
+      }
 
 export default Tariff;
